@@ -1,6 +1,6 @@
 package com.bytebank;
 
-public class account {
+public class Account {
     double balance;
     String holder;
     int bankCode;
@@ -18,7 +18,7 @@ public class account {
         return false;
     }
 
-    public boolean transfer(double value, account destino) {
+    public boolean transfer(double value, Account destino) {
         if (this.balance >= value) {
             this.balance -= value;
             destino.deposit(value);
